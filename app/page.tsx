@@ -1,15 +1,26 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="bg-black pt-20 trend-1">
-      <p className="text-3xl font-bold text-white mb-10 text-left pl-9">
-        TRENDSĒTERA
-      </p>
-
-      <h1 className="text-2xl font-bold text-white mb-10 flex items-center justify-center w-full  text-center pt-20 ">
-        PROXIMAMENTE
-      </h1>
+    <main className="bg-black pt-20 trend-1 min-h-screen">
+      <Image
+        src="/img/desktop.png"
+        alt="hero"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        className="hidden md:block"
+      />
+      <Image
+        src="/img/mobile.png"
+        alt="hero"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        className="block md:hidden"
+      />
       {/* <div className="overflow-hidden">
         <video loop className="w-full" autoPlay muted>
           <source src="/img/video.mp4" type="video/mp4" />
